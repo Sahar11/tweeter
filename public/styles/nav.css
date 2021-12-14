@@ -1,0 +1,37 @@
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 120px;
+  width: 100vw;
+  background-color: #4056A1;
+  padding-top: 2em ;
+}
+
+nav span {
+  font-family: 'Bungee', sans-serif;
+  color: #ffffff;
+  padding-left: 1.5em;
+}
+
+
+#new-tweet, .fa-angle-double-down{
+  float: right;
+ 
+  color: #ffffff;
+  /* margin-right: 0px; */
+  font-family: 'Source Sans Pro', sans-serif;
+}
+#new-tweet {
+  margin-right: 1.5em;
+ 
+}
+
+.fa-angle-double-down {
+  color: red;
+  margin-right: 120px;
+  padding-top: 0.2em; padding-top: 0em;
+  /* animation: upDown 1.5s infinite; */
+  cursor: pointer;
+}
