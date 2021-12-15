@@ -1,0 +1,15 @@
+header {
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(195, 156, 199);
+  background-image: url(/images/cubes.png);
+}
+
+.your-name {
+
+}

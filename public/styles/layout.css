@@ -27,3 +27,14 @@ body {
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+ main {
+  width: 90%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 70px
+ }
+
+ main section.hide, main .error {
+  display: none;
+ } 

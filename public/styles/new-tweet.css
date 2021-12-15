@@ -1,0 +1,31 @@
+
+
+  textarea {
+    border-bottom: 5px solid;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    width: 100%;
+    background-color: #f4f1ec;
+    outline: none;
+    
+  }
+    .tweet{
+      background-color: #4056A1;
+      border:none;
+      color:#fff;
+      font-size: 25px;
+      font-family: 'Bungee', cursive;
+      justify-content: center;
+    }
+    .tweet-count {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+    }
+
+    .counter {
+      font-weight: bold;
+      font-family: 'Bungee', cursive;
+      align-self: flex-end;
+    }

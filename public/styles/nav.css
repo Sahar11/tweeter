@@ -5,6 +5,7 @@ nav {
   left: 0;
   height: 120px;
   width: 100vw;
+  z-index: 3;
   background-color: #4056A1;
   padding-top: 2em ;
 }
