@@ -71,13 +71,13 @@ $(document).ready(function () {
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
   }
-
+// form validation
   $("form").on("submit", function(evt) {
     evt.preventDefault();
     let content = $("textarea").val();
     if (content.length === 0) {
       $("#empty-tweet").slideDown("fast");
-    } else if (content.length > 140) {
+    } else if (content.length > 140) {   
       $("#excessive-tweet").slideDown("fast");
     } else {
       var formStuff = $(this).serialize();
