@@ -64,7 +64,7 @@ $(document).ready(function () {
         $(".counter").text("140");
       }
     });
-  }
+  }//
 
   function escape(str) {
   var div = document.createElement("div");
