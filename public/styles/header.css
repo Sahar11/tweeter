@@ -1,4 +1,4 @@
-header {
+.profile {
   height: 400px;
   width: 100%;
   margin-top: 120px;
@@ -6,10 +6,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(195, 156, 199);
+  background-color: rgb(102, 193, 238);
   background-image: url(/images/cubes.png);
 }
 
-.your-name {
-
-}

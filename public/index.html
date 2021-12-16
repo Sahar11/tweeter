@@ -19,6 +19,7 @@
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/21f7aaf469.js" crossorigin="anonymous"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
@@ -34,11 +35,11 @@
      <div id="new-tweet"> <strong>Write</strong> a new tweet </div>
      <div><i class="fas fa-angle-double-down"></i></div>
     </nav>
-    <header>
+    <header class="profile">
       <div>
           <img src="/images/profile-hex.png"> 
       </div>
-      <br>
+      <!-- <br> -->
       <div>
           <h2 class="your-name">Your Name</h2>
       </div>
@@ -49,14 +50,29 @@
     <main class="container">
       <section class="new-tweet">
         <h2>Compose Tweet</h2>
-        <form method="post" action="/tweets">
+        <form method="post" action="/tweets" id="datagetter">
          
           <textarea name="text" id="tweet-text" placeholder="What are you humming about?"></textarea>
           <div class="tweet-count">
-            <button class="tweet" type="submit">Tweet</button>
+            <button class="tweetbtn" type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      </section>
+      <section class="tweets">
+        <!-- <br class="line"> -->
+        <!-- <article id="tweet-container">
+          <header></header>
+          <p class="tweet"></p>
+           <hr> 
+          <footer><span class="timeago"></span>
+           <span class="icons"><i class="fas fa-flag"></i>
+            <i class="fas fa-retweet"></i>
+            <i class="fas fa-heart"></i> </span>
+
+          </footer>
+          
+        </article> -->
       </section>
     </main>
   </body>
