@@ -36,8 +36,8 @@ $(document).ready(function () {
 
   function renderTweets(tweets) {
     $tweetContainer.empty();
-    for (var ii = 0; ii < tweets.length; ii++) {
-      let tweet = tweets[ii];
+    for (var i = 0; i < tweets.length; i++) {
+      let tweet = tweets[i];
       $tweetContainer.prepend(createTweetElement(tweet));
     }
   }
@@ -64,29 +64,37 @@ $(document).ready(function () {
         $(".counter").text("140");
       }
     });
-  }//
+  }
 
   function escape(str) {
   var div = document.createElement("div");
   div.appendChild(document.createTextNode(str));
   return div.innerHTML;
   }
-// form validation
-  $("form").on("submit", function(evt) {
-    evt.preventDefault();
+  // form validation
+  $("form").on("submit", function(event) {
+    event.preventDefault();
     let content = $("textarea").val();
-    if (content.length === 0) {
-      $("#empty-tweet").slideDown("fast");
-    } else if (content.length > 140) {   
-      $("#excessive-tweet").slideDown("fast");
-    } else {
+  
+    if(!$('textarea', this).val()){
+      $(".error").slideDown("slow");
+      $('#error-message').text('Error : Empty input');
+     };
+
+     if($('textarea', this).val().length > 140){
+       $(".error").slideDown("slow");
+     $('#error-message').text('Error : Too many characters')
+     
+    } 
+    if(($('textarea', this).val()) && ($('textarea', this).val().length < 140)){
+     // $(".error").slideUp("slow");
       var formStuff = $(this).serialize();
       createNewTweet(formStuff);
     }
   });
 
   $("button").click(function(){
-    $(".new-tweet").slideToggle();
+   // $(".new-tweet").slideToggle();
     $("textarea").focus();
   });
 });

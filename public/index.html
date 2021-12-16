@@ -49,6 +49,9 @@
     <!-- Page-specific (main) content here -->
     <main class="container">
       <section class="new-tweet">
+        <section class="error">
+          <p id="error-message"></p>
+      </section>
         <h2>Compose Tweet</h2>
         <form method="post" action="/tweets">
          
@@ -58,6 +61,7 @@
             <output name="counter" class="counter" for="tweet-text">140</output>
           </div>
         </form>
+      
       </section>
       <section class="tweets">
       <!--tweets to be loaded-->
