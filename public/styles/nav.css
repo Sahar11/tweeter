@@ -6,7 +6,8 @@ nav {
   height: 120px;
   width: 100vw;
   z-index: 3;
-  background-color: #4056A1;
+  background-color: rgb(204, 176, 49);
+  background-image: url(/images/cubes.png);
   padding-top: 2em ;
 }
 
@@ -33,6 +34,16 @@ nav span {
   color: red;
   margin-right: 120px;
   padding-top: 0.2em; padding-top: 0em;
-  /* animation: upDown 1.5s infinite; */
+  animation: upDown 1s linear infinite;
   cursor: pointer;
 }
+
+
+  @keyframes upDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 100px;
+    }
+  }

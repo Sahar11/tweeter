@@ -3,13 +3,12 @@
  * https://css-tricks.com/international-box-sizing-awareness-day/
  * Do not modify these two selectors, please
  */
-
- /* font-family: 'Bungee', cursive;
-font-family: 'Source Sans Pro', sans-serif; */
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -18,23 +17,62 @@ html {
  */
 
 body {
-  color: #545149;
+  color: #080808;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
- main {
-  width: 90%;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  margin-top: 70px
- }
 
- main section.hide, main .error {
+main section.hide,
+main .error {
   display: none;
- } 
+}
+
+/* Medium Devices, Wide Screens */
+@media only screen and (min-width: 768px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: space-between;
+    color: #004a83;
+  }
+  .col-header {
+    width: 100%;
+  }
+  .col-main {
+    margin-top: 12%;
+    width: 100%;
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+  /* #tweet-text {
+    word-wrap: break-word; 
+  } */
+}
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1248px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: space-between;
+    color: #004a83;
+  }
+  .col-header {
+    margin-top: 5%;
+    width: 30%;
+  }
+  .col-main {
+    margin-top: 14%;
+    width: 60%;
+  }
+  /* #tweet-text {
+    word-wrap: break-word; 
+  } */
+  
+}

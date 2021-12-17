@@ -6,7 +6,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(102, 193, 238);
+  background-color: rgb(204, 176, 49);
   background-image: url(/images/cubes.png);
 }
-
+.your-name {
+  font-size: 30px;
+}

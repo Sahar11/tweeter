@@ -24,9 +24,9 @@ $(document).ready(function () {
         <hr> 
       <footer>
       <span class="timeago">${timeago.format(tweet.created_at)}</span>
-     <span class="icons"> <i class="fas fa-flag"></i>
-      <i class="fas fa-retweet"></i>
-      <i class="fas fa-heart"></i>
+     <span class="icons"> <i class="fas color fa-flag"></i>
+      <i class="fas color fa-retweet"></i>
+      <i class="fas color fa-heart"></i>
        </span>
       </footer>
     </article>
@@ -79,11 +79,13 @@ $(document).ready(function () {
     if(!$('textarea', this).val()){
       $(".error").slideDown("slow");
       $('#error-message').text('Error : Empty input');
+      $(".error").slideUp("slow");
      };
 
      if($('textarea', this).val().length > 140){
        $(".error").slideDown("slow");
-     $('#error-message').text('Error : Too many characters')
+     $('#error-message').text('Error : Too many characters');
+     $(".error").slideUp("slow");
      
     } 
     if(($('textarea', this).val()) && ($('textarea', this).val().length < 140)){
