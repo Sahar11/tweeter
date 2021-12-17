@@ -79,17 +79,17 @@ $(document).ready(function () {
     if(!$('textarea', this).val()){
       $(".error").slideDown("slow");
       $('#error-message').text('Error : Empty input');
-      $(".error").slideUp("slow");
+     // $(".error").slideUp("slow");
      };
 
      if($('textarea', this).val().length > 140){
        $(".error").slideDown("slow");
      $('#error-message').text('Error : Too many characters');
-     $(".error").slideUp("slow");
+    // $(".error").slideUp("slow");
      
     } 
     if(($('textarea', this).val()) && ($('textarea', this).val().length < 140)){
-     // $(".error").slideUp("slow");
+      $(".error").slideUp("slow");
       var formStuff = $(this).serialize();
       createNewTweet(formStuff);
     }
