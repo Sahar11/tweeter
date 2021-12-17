@@ -4,7 +4,7 @@
 //  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
 //  */
 
-   
+
 $(document).ready(function () {
   var $tweetContainer = $(".tweets");
 
@@ -58,7 +58,7 @@ $(document).ready(function () {
       url: "/tweets",
       data: data,
       method: "POST",
-      success: function(data) {
+      success: function (data) {
         loadTweets();
         $("textarea").val('');
         $(".counter").text("140");
@@ -67,36 +67,36 @@ $(document).ready(function () {
   }
 
   function escape(str) {
-  var div = document.createElement("div");
-  div.appendChild(document.createTextNode(str));
-  return div.innerHTML;
+    var div = document.createElement("div");
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
   // form validation
-  $("form").on("submit", function(event) {
+  $("form").on("submit", function (event) {
     event.preventDefault();
     let content = $("textarea").val();
-  
-    if(!$('textarea', this).val()){
+
+    if (!$('textarea', this).val()) {
       $(".error").slideDown("slow");
       $('#error-message').text('Error : Empty input');
-     // $(".error").slideUp("slow");
-     };
+      // $(".error").slideUp("slow");
+    };
 
-     if($('textarea', this).val().length > 140){
-       $(".error").slideDown("slow");
-     $('#error-message').text('Error : Too many characters');
-    // $(".error").slideUp("slow");
-     
-    } 
-    if(($('textarea', this).val()) && ($('textarea', this).val().length < 140)){
+    if ($('textarea', this).val().length > 140) {
+      $(".error").slideDown("slow");
+      $('#error-message').text('Error : Too many characters');
+      // $(".error").slideUp("slow");
+
+    }
+    if (($('textarea', this).val()) && ($('textarea', this).val().length < 140)) {
       $(".error").slideUp("slow");
       var formStuff = $(this).serialize();
       createNewTweet(formStuff);
     }
   });
 
-  $("button").click(function(){
-   // $(".new-tweet").slideToggle();
+  $("button").click(function () {
+    // $(".new-tweet").slideToggle();
     $("textarea").focus();
   });
 });
